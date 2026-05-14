@@ -1,12 +1,10 @@
 # config.py
-# ============================================================
 # Configuration file for EAST text detection project
 # 配置文件：集中管理所有参数，修改这里即可改变程序行为
-# ============================================================
 
 # ---- Paths / 路径配置 ----
 MODEL_PATH = "model/frozen_east_text_detection.pb"   # Path to pre-trained model 预训练模型路径
-IMAGE_PATH = "images/test.jpg"                       # Input image to detect 待检测图片路径
+IMAGE_PATH = "images/test2.jpg"                       # Input image to detect 待检测图片路径
 OUTPUT_DIR = "output"                                # Directory to save result images 结果输出目录
 
 # ---- Detection parameters / 检测参数 ----

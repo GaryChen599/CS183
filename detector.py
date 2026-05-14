@@ -1,14 +1,11 @@
 # detector.py
-# ============================================================
 # EAST text detector class
 # EAST文本检测器类，封装了模型加载、推理、解码和画框
-# ============================================================
 
 import cv2
 import numpy as np
 import time
 from imutils.object_detection import non_max_suppression
-
 
 class EASTTextDetector:
     """
@@ -20,7 +17,6 @@ class EASTTextDetector:
         """
         Initialize detector, load EAST model
         初始化检测器，加载EAST预训练模型
-
         Parameters / 参数:
         model_path : str         path to .pb model file  模型文件路径
         conf_thresh: float       confidence threshold    置信度阈值
@@ -45,10 +41,8 @@ class EASTTextDetector:
         """
         Run text detection on given image
         对指定图片执行文本检测，返回带框的图像和框列表
-
         Parameters / 参数:
         image_path : str    path to input image  输入图片路径
-
         Returns / 返回:
         display_img : ndarray    image with boxes drawn   画好框的结果图像
         boxes : list             list of rectangles       检测到的框坐标列表

@@ -1,10 +1,6 @@
-# main.py
-# ============================================================
 # Entry point of the project / 项目入口
 # Reads config, runs detection, displays/saves result
 # 读取配置文件 → 初始化检测器 → 执行检测 → 显示/保存结果
-# ============================================================
-
 import os
 import cv2
 from config import *                  # Import all configuration / 导入所有配置参数
