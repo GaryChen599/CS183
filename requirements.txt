@@ -1,5 +1,0 @@
-opencv-python
-numpy
-matplotlib
-imutils
-#配置环境依赖复制 pip install -r requirements.txt
