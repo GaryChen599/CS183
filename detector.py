@@ -83,15 +83,16 @@ class EASTTextDetector:
         boxes = non_max_suppression(np.array(rects), probs=confidences)
 
         # 7. Map coordinates back and draw rectangles / 坐标还原到原图并画框
+        mapped_boxes = []
         for (startX, startY, endX, endY) in boxes:
-            startX = int(startX * rW)
-            startY = int(startY * rH)
-            endX = int(endX * rW)
-            endY = int(endY * rH)
-            # Draw green rectangle / 画绿色矩形框
-            cv2.rectangle(display_img, (startX, startY), (endX, endY), (0, 255, 0), 2)
+            startX_m = int(startX * rW)
+            startY_m = int(startY * rH)
+            endX_m = int(endX * rW)
+            endY_m = int(endY * rH)
+            cv2.rectangle(display_img, (startX_m, startY_m), (endX_m, endY_m), (0, 255, 0), 2)
+            mapped_boxes.append((startX_m, startY_m, endX_m, endY_m))
 
-        return display_img, boxes
+        return display_img, mapped_boxes
 
     def _decode_predictions(self, scores, geometry):
         """
