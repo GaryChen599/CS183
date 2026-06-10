@@ -1,5 +1,8 @@
-# ocr_recognizer.py
-# OCR recognizer with preprocessing / OCR识别器（含预处理）
+"""
+File Name/文件名: ocr_recognizer.py
+Responsible Team Member/负责团队成员:HuYang(胡杨)
+Description/描述: Performs OCR text recognition, including model loading,image preprocessing, and recognition result processing./执行OCR文本识别，包含模型加载、图像预处理以及识别结果处理。
+"""
 import easyocr, cv2
 from preprocessor import ImagePreprocessor
 
