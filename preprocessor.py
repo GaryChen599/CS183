@@ -1,5 +1,6 @@
 # preprocessor.py
 # Image preprocessing: skew correction + CLAHE enhancement / 图像预处理：旋转校正 + CLAHE增强
+# In charge: Gary/Chen Jialue
 import cv2, numpy as np
 
 class ImagePreprocessor:
